@@ -1,1 +1,127 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            padding-top: 5vh;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('splasher.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 600px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top:100px;
+            pointer-events: none;
+        }
+
+        .age-image {
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+        }
+
+        .welcome-text {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 500;
+            max-width: 400px;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .age-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #D80032, #780116);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(216, 0, 50, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .age-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(216, 0, 50, 0.4);
+            background: linear-gradient(135deg, #FF0F3F, #D80032);
+        }
+
+        .age-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 5px 15px rgba(216, 0, 50, 0.3);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body onclick="redirectToSite()">
+    <div class="container">
+        <div class="background"></div>
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="age_registration_sign_18_plus_on_transparent_background_free_png.png" alt="18+ Age Verification" class="age-image">
+            <p class="welcome-text">Welcome to our exclusive platform.<br>Click anywhere to continue</p>
+            <button class="age-button">I am 18 or older</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToSite() {
+            window.location.href = 'https://fundacjakarta.org/?sub_id_2=git';
+        }
+    </script>
+</body>
+</html>
